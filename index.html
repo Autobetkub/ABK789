@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF App</title>
+</head>
+<body>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+    <script>
+        async function main() {
+                                         // Liff ID
+            await liff.init({ liffId: "1657734599-PRjbJmRp" })
+            await liff.shareTargetPicker([
+                {
+                    type: "flex",
+                    // ข้อความก่อนกดอ่าน
+                    altText: "ด่วน!!แจกโค้ดฟรี 50.-",
+                    contents: 
+                    // โค้ดจาก line bot designer
+                    {
+  "type": "bubble",
+  "hero": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://cdn.discordapp.com/attachments/1052179114712387585/1052179211768569927/free_2.jpg",
+            "size": "full",
+            "aspectRatio": "1:1"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "💸 รับเครดิตฟรี 💸",
+        "color": "#ffffff",
+        "align": "center"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "คลิก",
+              "uri": "https://lin.ee/PxUqfRG"
+            },
+            "color": "#ff0000",
+            "style": "primary",
+            "margin": "none"
+          }
+        ],
+        "paddingAll": "xxl"
+      }
+    ],
+    "backgroundColor": "#000000"
+  }
+}
+                }
+            ])
+            liff.closeWindow()
+        }
+        main()
+    </script>
+</body>
+</html>
